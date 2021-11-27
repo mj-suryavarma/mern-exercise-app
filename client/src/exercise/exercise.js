@@ -91,7 +91,6 @@ function Exercise() {
                  :"not_updated all_exercise"} key={data._id}>
                <h3>{data.name}</h3>
                <p>{data.description}</p>
-               <p>{data._id}</p>
                <div className="all_exercise_time_container">
                   <div>{data.duration}</div>
                   <div className="exercise_time">{data.time}</div>

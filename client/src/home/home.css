@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@900&display=swap');
+
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+.home_page{
+    font-size: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+    color:rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+}
+
+.background_image{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background:url('../imgsrc/exercise-home.jpg');
+    background-repeat: no-repeat;
+    background-size:cover; 
+    z-index: -1;
+}
+.background_image::before  {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color:rgba(00, 0, 0, 0.6);
+}
+
+
+.home_logo{
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif; 
+    background:-webkit-linear-gradient(  white,white,black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.home_header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0% 5% ;
+}
+.navbar > ul >li{
+    margin: 10px;
+    padding: 10px;
+    
+}
+.navbar > ul> li >a{
+    
+    color: rgb(112, 111, 111);
+}
+
+.home_body{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 0% 7%;
+    padding-top:80px ;
+}
+
+.welcome_message_container{
+  flex: 0.4;
+  margin-top: 30px;
+}
+.welcome_message_para{
+    font-size: 1.1rem;
+   color: rgb(143, 143, 143);
+   text-align:left;
+   font-family: 'Lobster', cursive;
+   font-family: 'Roboto', sans-serif;
+   
+ }
+ .font_bars{
+     display:none; 
+     cursor:pointer;
+ }
+
+ #menuBarContainer{
+     
+    width: 100%;
+    position: fixed;
+    top:0;
+    right:0;
+    height: 100%;
+     background-color: rgba(00, 0, 0, 0.6);
+     backdrop-filter:blur(1px);
+     -webkit-backdrop-filter:brightness(10px);
+    }
+    .menuBar{
+        width: 30%;
+        position: fixed;
+        top:0;
+        right:0;
+        height: 100%;
+        z-index: 1;
+        text-decoration: none;
+        text-align: center;
+
+ }
+ .menuBar >ul >li>a{
+     text-decoration: none;
+     margin-top: 20px;
+ }
+ .menuBar>ul>li>a:hover{
+     color: black;
+ }
+ 
+
+ .X_simple{
+     position: fixed;
+     top: 10px;
+     right: 20px;
+     font-size:2rem;
+     color:gray;
+     text-shadow: 1px 1px gray;
+     transition: 1s;
+ }
+ .X_simple:hover{
+     color: black;
+     cursor: pointer;
+ }
+.welcome_back{
+    display: none;
+}
+
+
+ @media screen and (max-width:650px) {
+     .home_body{
+         flex-direction:column;
+         margin: 0% 10%;
+
+     }
+     .menuBar{
+         width: 50%;
+     }
+
+   .navbar_container{
+    display: none;
+   }
+     .font_bars{
+         display: block;
+         font-size: 3rem;
+         margin: 10px;
+         padding: 10px;
+     }
+     .welcome_message_container{
+         display: none;
+     }
+     .welcome_back{
+         display: inline;
+     }
+ }

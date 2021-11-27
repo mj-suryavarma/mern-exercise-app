@@ -1,0 +1,10 @@
+.login_container{
+    max-width: 450px;
+    margin: 20px;
+    padding-right: 20px;
+    flex: .5;
+}
+
+.email_help{
+    font-size: 0.5rem;
+}

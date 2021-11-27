@@ -45,20 +45,22 @@ function Exercise() {
         }
 
         useEffect( async() => {
+          const  token = localStorage.getItem('token')
 
+          const reqOptions = {
 
-            const headers = {     // get user's all exercise
+            headers : {     // get user's all exercise
                            'Content-Type':'application/json', 
-                        'Authorization':`Bearer ${localStorage.getItem('token')}`,
+                        'Authorization':`Bearer ${token}`,
                     }
              
+          }
              
-                    axios.get('/api/v1/exercise',{headers})
+                    axios.get('/api/v1/exercise',reqOptions)
                       .then(res => { 
                           setAllData(res.data.getAllExercise)
                     })
                       .catch(err =>console.log(err))  
-                      console.log(allData)   
         },[])
 
     return (  <div className="AllExercisePage">

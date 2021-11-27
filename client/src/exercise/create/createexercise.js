@@ -35,7 +35,6 @@ class CreateExercise extends React.Component {
             hour = hour < 10 ? "0"+hour : hour ; 
          var TimeValue = hour + ":"+minute+" "+suffix;
          this.setState({fullTimeValue: TimeValue});
-         console.log(this.state.fullTimeValue)
     }
   }
       submitHanlder = async (e)=> {
